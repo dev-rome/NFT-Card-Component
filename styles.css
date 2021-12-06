@@ -1,0 +1,145 @@
+:root {
+	--main-bg-color: hsl(217, 54%, 11%);
+	--main-card-color: hsl(216, 50%, 16%);
+	--white: hsl(0, 0%, 100%);
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--line-color: hsl(215, 32%, 27%);
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.8rem;
+	font-family: "Outfit", sans-serif;
+	background: var(--main-bg-color);
+}
+
+.card-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 327px;
+	background: var(--main-card-color);
+	padding: 2.5rem 2.5rem 3rem;
+	border-radius: 15px;
+}
+
+.card-img {
+	background-image: url("/images/image-equilibrium.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 278px;
+	height: 278px;
+	border-radius: 8px;
+	margin-bottom: 2.5rem;
+}
+
+.equilibrium-title {
+	font-size: 2.2rem;
+	font-weight: 600;
+	color: var(--white);
+	margin-bottom: 2rem;
+}
+
+.info-text {
+	color: var(--soft-blue);
+	font-weight: 300;
+	margin-bottom: 2.5rem;
+}
+
+.data-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.data {
+	display: flex;
+	justify-content: space-between;
+}
+
+.data-left,
+.data-right {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	font-size: 1.6rem;
+}
+
+.left-text {
+	color: var(--cyan);
+	font-weight: 600;
+}
+
+.right-text {
+	color: var(--soft-blue);
+}
+
+.data-wrapper::after {
+	content: " ";
+	border-bottom: 1px solid var(--line-color);
+	margin: 2.5rem 0 1.5rem;
+}
+
+.creator-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.creator-text {
+	font-size: 1.6rem;
+	color: var(--soft-blue);
+}
+
+.creator-avatar {
+	width: 33px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+}
+
+.creator-name {
+	color: var(--white);
+}
+
+@media only screen and (min-width: 600px) {
+	.card-container {
+		width: 350px;
+	}
+
+	.card-img {
+		width: 302px;
+		height: 302px;
+	}
+
+	.card-img:hover::after {
+		content: url("/images/icon-view.svg");
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 302px;
+		height: 302px;
+		background: hsla(178, 100%, 50%, 0.4);
+		cursor: pointer;
+		border-radius: 8px;
+	}
+
+	.equilibrium-title:hover,
+	.creator-name:hover {
+		cursor: pointer;
+		color: var(--cyan);
+	}
+}
