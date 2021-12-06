@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [dev-rome](https://www.frontendmentor.io/profile/dev-rome/solutions)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [NFT-Card-Component](https://wizardly-ritchie-7bf14e.netlify.app)
 
 ## My process
 
